@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1 class="brand">Movie Finder</h1>
+        <p class="tagline">Look up any film by its title.</p>
+      </header>
+
+      <form id="search-form" class="search" role="search">
+        <label for="movie-title" class="visually-hidden">Movie title</label>
+        <input
+          id="movie-title"
+          type="search"
+          placeholder="Try &ldquo;Blade Runner 2049&rdquo;"
+          autocomplete="off"
+          required
+        />
+        <button id="search-button" type="submit">Search</button>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <article id="movie-card" class="card" hidden>
+        <img id="movie-poster" class="poster" alt="" />
+        <div class="details">
+          <h2 id="movie-name" class="title"></h2>
+          <p id="movie-meta" class="meta"></p>
+          <p id="movie-genre" class="genre"></p>
+          <p id="movie-plot" class="plot"></p>
+
+          <dl class="facts">
+            <div>
+              <dt>IMDb rating</dt>
+              <dd id="movie-rating"></dd>
+            </div>
+            <div>
+              <dt>Director</dt>
+              <dd id="movie-director"></dd>
+            </div>
+            <div>
+              <dt>Cast</dt>
+              <dd id="movie-actors"></dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
